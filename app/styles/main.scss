@@ -1,0 +1,10 @@
+@import 'vars';
+@import 'fonts';
+@import 'typography';
+
+body {
+  font-family: 'OpenSansRegular', Helvetica, sans-serif;
+  color: $font-color--dark;
+  background-color: $background--light;
+  padding: $half-space;
+}

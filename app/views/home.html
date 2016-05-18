@@ -1,0 +1,12 @@
+<h1 class="heading -large">{{ home.title | ExampleFilter }}</h1>
+
+<h3 class="heading -medium">Here is a fancy number served up courtesy of Angular: <span class="number-example">{{ home.number }}</span></h3>
+
+<div>
+	<audio ng-if="home.track" controls>
+	  <source ng-src="{{home.track | TrustedFilter }}" type="audio/mpeg">
+	</audio>
+</div>
+<i class="fa fa-spotify fa-5x" aria-hidden="true"></i><span>Spotify</span>
+
+<div example-directive title="WOW!" click-message="You clicked me!">Directive is not loaded.</div>
