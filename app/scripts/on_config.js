@@ -6,8 +6,8 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
   $stateProvider
   .state('Home', {
     url: '/',
-    controller: 'ExampleCtrl as home',
-    templateUrl: 'home.html',
+    controller: 'HomeCtrl as home',
+    templateUrl: 'controllers/home/home.html',
     title: 'Home'
   });
 

@@ -2,7 +2,7 @@
 @import 'fonts';
 @import 'typography';
 @import 'mixins';
-@import 'modules/**/*.scss';
+@import '../scripts/**/*.scss';
 
 body {
   font-family: 'OpenSansRegular', Helvetica, sans-serif;

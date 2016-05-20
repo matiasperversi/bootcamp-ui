@@ -11,15 +11,15 @@ export default {
 
   styles: {
     src: 'app/styles/main.scss',
-    watch: 'app/styles/**/*.scss',
+    watch: 'app/**/*.scss',
     dest: 'build/css',
     prodSourcemap: false,
     sassIncludePaths: []
   },
 
   scripts: {
-    src: 'app/js/**/*.js',
-    dest: 'build/js',
+    src: 'app/scripts/**/*.js',
+    dest: 'build/scripts',
     test: 'test/**/*.js',
     gulp: 'gulp/**/*.js'
   },
@@ -50,8 +50,8 @@ export default {
 
   views: {
     index: 'app/index.html',
-    src: 'app/views/**/*.html',
-    dest: 'app/js'
+    src: 'app/scripts/**/*.html',
+    dest: 'app/scripts'
   },
 
   gzip: {

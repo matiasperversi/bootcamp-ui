@@ -1,10 +1,18 @@
-function ExampleCtrl(Spotify) {
+function HomeCtrl(Spotify) {
 	'ngInject';
 
 	// ViewModel
 	const vm = this;
 
 	vm.isPlaying = false;
+	vm.searchInput = '';
+
+	vm.search = function() {
+		console.log('hola');
+		Spotify.search('the killers','artist').then(function(data) {
+			console.log(data);
+		});
+	}
 
 	vm.isPaused = function() {
 		return !vm.isPlaying;
@@ -28,6 +36,6 @@ function ExampleCtrl(Spotify) {
 }
 
 export default {
-  name: 'ExampleCtrl',
-  fn: ExampleCtrl
+  name: 'HomeCtrl',
+  fn: HomeCtrl
 };
