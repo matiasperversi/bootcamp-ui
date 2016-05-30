@@ -6,9 +6,11 @@ function HomeCtrl(Spotify) {
 
 	vm.isPlaying = false;
 	vm.searchInput = '';
+	vm.hero = {
+		name: 'Spawn'
+	};
 
 	vm.search = function() {
-		console.log('hola');
 		Spotify.search('the killers','artist').then(function(data) {
 			console.log(data);
 		});

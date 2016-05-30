@@ -10,6 +10,7 @@ import './filters';
 import './controllers';
 import './services';
 import './directives';
+import './components';
 import 'angular-spotify';
 
 // create and bootstrap application
@@ -20,6 +21,7 @@ const requires = [
   'app.controllers',
   'app.services',
   'app.directives',
+  'app.components',
   'spotify'
 ];
 
