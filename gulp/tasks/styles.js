@@ -24,7 +24,9 @@ gulp.task('styles', function () {
       includePaths: config.styles.sassIncludePaths
     }))
     .on('error', handleErrors)
-    .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', '> 1%', 'ie 8']
+    }))
     .pipe(gulpif(
       createSourcemap,
       sourcemaps.write( global.isProd ? './' : null ))
