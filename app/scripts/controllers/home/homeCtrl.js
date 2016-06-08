@@ -30,7 +30,7 @@ function HomeCtrl(Spotify) {
 		vm.isPlaying = false;
 	}
 	
-	Spotify.getTrack('0eGsygTp906u18L0Oimnem').then(function(data) {
+	Spotify.getTrack('3iyjOwyySLRDEW2tqP7MhX').then(function(data) {
 		vm.audio = new Audio(data.preview_url);
 		vm.audio.volume = 0.1;
 	});
