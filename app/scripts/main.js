@@ -11,6 +11,7 @@ import './controllers';
 import './services';
 import './directives';
 import './components';
+import './api';
 import 'ngmap';
 
 // create and bootstrap application
@@ -22,7 +23,8 @@ const requires = [
   'app.services',
   'app.directives',
   'app.components',
-  'ngMap'
+  'app.api',
+  'ngMap',
 ];
 
 // mount on window for testing
