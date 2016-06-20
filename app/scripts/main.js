@@ -11,7 +11,7 @@ import './controllers';
 import './services';
 import './directives';
 import './components';
-import 'angular-spotify';
+import 'ngmap';
 
 // create and bootstrap application
 const requires = [
@@ -22,7 +22,7 @@ const requires = [
   'app.services',
   'app.directives',
   'app.components',
-  'spotify'
+  'ngMap'
 ];
 
 // mount on window for testing

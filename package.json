@@ -1,6 +1,6 @@
 {
-  "name": "angularjs-gulp-browserify-boilerplate",
-  "version": "1.5.9",
+  "name": "GPI-s Project",
+  "version": "1.0.0",
   "author": "Jake Marsh <jakemmarsh@gmail.com>",
   "description": "Boilerplate using AngularJS, SASS, Gulp, and Browserify while also utilizing best practices.",
   "repository": {
@@ -82,6 +82,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "angular-spotify": "^1.4.1"
+    "ngmap": "^1.17.1"
   }
 }
