@@ -1,15 +1,20 @@
-function HomeCtrl(VelocitySrv) {
+function HomeCtrl($interval, VelocitySrv) {
 	'ngInject';
 
 	// ViewModel
 	const vm = this;
 
-	vm.callSrv = function() {
-		VelocitySrv.getMaxVel().then(function(){
-			console.log('hola');
+	var stop = $interval(function() {
+		VelocitySrv.getMaxVel().then(function(data){
+			vm.velocity = data;
 		}, function() {
 			console.log('fail');
 		});
+	}, 1000);
+
+	vm.stopSrv = function() {
+		$interval.cancel(stop);
+		stop = undefined;
 	}
 
 }
