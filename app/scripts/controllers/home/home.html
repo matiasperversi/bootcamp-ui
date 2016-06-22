@@ -3,8 +3,8 @@
 </div>
 <!-- <example-component hero="home.hero"></example-component>
 <div example-directive title="WOW!" click-message="You clicked me!">Directive is not loaded.</div> -->
-<ng-map zoom="4" center="-33, 151">
-	<marker position="-33.890542, 151.274856"
+<ng-map ng-if="home.currentPos" zoom="16" center="{{home.currentPos}}">
+	<marker position="{{home.currentPos}}"
 	  icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png">
 	</marker>
 </ng-map>

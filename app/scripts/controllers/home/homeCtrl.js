@@ -1,18 +1,26 @@
-function HomeCtrl($interval, VelocitySrv) {
+function HomeCtrl($interval, VelocitySrv, PositionsSrv) {
 	'ngInject';
 
 	// ViewModel
-	const vm = this;
+	const home = this;
 
-	var stop = $interval(function() {
+	 $interval(function() {
 		VelocitySrv.getMaxVel().then(function(data){
-			vm.velocity = data;
+			home.velocity = data;
 		}, function() {
 			console.log('fail');
 		});
 	}, 1000);
 
-	vm.stopSrv = function() {
+	var stop = $interval(function() {
+		PositionsSrv.getCurrentPos().then(function(data){
+			home.currentPos = data.lat + ',' + data.long;
+		}, function() {
+			console.log('fail');
+		});
+	}, 1000);
+
+	home.stopSrv = function() {
 		$interval.cancel(stop);
 		stop = undefined;
 	}
